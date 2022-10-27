@@ -37,7 +37,13 @@ app.use("/api", productRoutes);
 app.use("/api", braintreeRoutes);
 app.use("/api", orderRoutes);
 
-const port = process.env.PORT || 8000;
+app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/frontend/build", "index.html"));
+});
+
+const port = process.env.PORT || 8881;
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
