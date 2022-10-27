@@ -46,15 +46,11 @@
   font-weight: bold;
 }
 
-/**
- * product image on card
- */
-
 .product-img {
   min-height: 100px;
 }
 
-/ .braintree-loader__indicator {
+.braintree-loader__indicator {
   border: #000;
 }
 .braintree-placeholder,
