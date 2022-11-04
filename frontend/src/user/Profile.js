@@ -97,7 +97,7 @@ const Profile = ({ match }) => {
   );
 
   return (
-    <Layout title="Profile" className="container-fluid">
+    <Layout title="Radu's ecommerce shop" className="container-fluid">
       <h2 className="mb-4">Profile update</h2>
       {profileUpdate(name, email, password)}
       {redirectUser(success)}

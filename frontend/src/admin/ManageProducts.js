@@ -34,7 +34,7 @@ const ManageProducts = () => {
   }, []);
 
   return (
-    <Layout title="Manage Products" className="container-fluid">
+    <Layout title="Radu's ecommerce shop" className="container-fluid">
       <div className="row">
         <div className="col-12">
           <h2 className="text-center">Total {products.length} products</h2>

@@ -92,7 +92,7 @@ const Orders = () => {
   );
 
   return (
-    <Layout title="Orders" className="container-fluid">
+    <Layout title="Radu's ecommerce shop" className="container-fluid">
       <div className="row">
         <div className="col-md-8 offset-md-2">
           {showOrdersLength()}

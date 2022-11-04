@@ -152,14 +152,14 @@ const Card = ({
           <Row className="mx-2">
             <Col>
               <Row>
-                <h5 className="text-start">
+                <h1 className="text-start">
                   <Link
                     style={{ textDecoration: "none", color: "white" }}
                     to={`/product/${product._id}`}
                   >
                     {product.name}
                   </Link>
-                </h5>
+                </h1>
               </Row>
               <Row>
                 <div className="mx-auto">{showStock(product.quantity)}</div>
@@ -172,13 +172,12 @@ const Card = ({
                 </p>
               </Row>
               <Row>
-                <h5 className="text-end card-text">$ {product.price}</h5>
+                <h3 className="text-end card-text">$ {product.price}</h3>
               </Row>
             </Col>
           </Row>
         </div>
         <div className="my-2 p-0 card-footer">
-          {/* <br /> */}
           <Row className="mx-1">
             <Col>
               {showViewButton(showViewProductButton)}
@@ -189,6 +188,48 @@ const Card = ({
               {showRemoveButton(showRemoveProductButton)}
             </Col>
           </Row>
+        </div>
+      </div>
+    );
+  } else if (CardType === "Product") {
+    return (
+      <div
+        className="card w-75 mh-50 mb-2 mx-auto "
+        style={{
+          backgroundColor: "#343a40",
+          color: "white",
+          borderColor: "#000",
+          minWidth: "330px",
+        }}
+      >
+        <div className="card-body d-flex flex-column ">
+          <Row>
+            <Col lg={5} xl={4} xxl={3}>
+              {shouldRedirect(redirect)}
+              <ShowImage item={product} url="product" />
+            </Col>
+            <Col lg={7} xl={8} xxl={9}>
+              <h1 className="mb-4">{product.name}</h1>
+              <h5 className="card-text mt-3 mb-auto">{product.description}</h5>
+              <h1 className="mt-5 card-text fs-5">$ {product.price}</h1>
+              <p className="fs-6">
+                Category: {product.category && product.category.name}
+              </p>
+            </Col>
+          </Row>
+        </div>
+        <div className="card-footer mt-1">
+          <p className="">Added on {moment(product.createdAt).fromNow()}</p>
+          {showStock(product.quantity)}
+          <br />
+
+          {showViewButton(showViewProductButton)}
+
+          {showAddToCartBtn(showAddToCartButton)}
+
+          {showRemoveButton(showRemoveProductButton)}
+
+          {showCartUpdateOptions(cartUpdate)}
         </div>
       </div>
     );
@@ -208,7 +249,7 @@ const Card = ({
           <h1>{product.name}</h1>
 
           <h5 className="card-text mt-2 mb-auto">
-            {product.description.substring(0, 100)}
+            {product.description.substring(0, 100)}...
           </h5>
           <h4 className="mt-4 card-text">$ {product.price}</h4>
           <p className="">

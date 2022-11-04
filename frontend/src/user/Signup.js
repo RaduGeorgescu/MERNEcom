@@ -93,7 +93,10 @@ const Signup = () => {
   );
 
   return (
-    <Layout title="Signup" className="container col-md-8 offset-md-2">
+    <Layout
+      title="Radu's ecommerce shop"
+      className="container col-md-8 offset-md-2"
+    >
       {showSuccess()}
       {showError()}
       {signUpForm()}

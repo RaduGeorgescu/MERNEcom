@@ -14,7 +14,7 @@ const isActive = (history, path) => {
 const Menu = ({ history, title }) => (
   <div className="mb-5 ">
     <ul className="pb-3 pt-2 nav nav-tabs bg-black border border-0 d-flex justify-content-between">
-      <div className="d-flex justify-content-start">
+      <div className="d-flex justify-content-start dropdown">
         <li className="nav-item">
           <Link className="nav-link" style={isActive(history, "/")} to="/">
             Home
@@ -57,7 +57,12 @@ const Menu = ({ history, title }) => (
       </div>
       <div className="d-flex justify-content-center">
         <li>
-          <h3 className="text-light d-none d-sm-block">{title}</h3>
+          <h1
+            style={{ fontSize: "2rem" }}
+            className="text-light d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block"
+          >
+            {title}
+          </h1>
         </li>
       </div>
       <div className="d-flex justify-content-end">

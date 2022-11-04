@@ -5,6 +5,8 @@ import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import { prices } from "./fixedPrices";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 const Shop = () => {
   const [myFilters, setMyFilters] = useState({
@@ -94,9 +96,9 @@ const Shop = () => {
   };
 
   return (
-    <Layout title="Shop Page" className="container-fluid">
+    <Layout title="Radu's ecommerce shop" className="container-fluid h-100">
       <div className="row">
-        <div className="col-2">
+        <Col className="col-2">
           <h4>Filter by categories</h4>
           <ul className="ps-0">
             <Checkbox
@@ -112,20 +114,20 @@ const Shop = () => {
               handleFilters={(filters) => handleFilters(filters, "price")}
             />
           </div>
-        </div>
+        </Col>
 
-        <div className="col-9">
+        <Col className="col-9">
           <h2 className="mb-4">Products</h2>
-          <div className="row">
+          <Row xs={1} sm={1} md={2} xl={3} xxl={4} className="mx-auto">
             {filteredResults.map((product, i) => (
-              <div key={i} className="col-4 mb-3">
+              <Col key={i} className="mb-3">
                 <Card CardType="shortCard" product={product} />
-              </div>
+              </Col>
             ))}
-          </div>
+          </Row>
           <hr />
           {loadMoreButton()}
-        </div>
+        </Col>
       </div>
     </Layout>
   );

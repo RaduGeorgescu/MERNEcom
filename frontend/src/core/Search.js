@@ -80,13 +80,13 @@ const Search = () => {
   const searchForm = () => (
     <form onSubmit={searchSubmit}>
       <span
-        className="input-group-text"
+        className="w-75 mx-auto input-group-text"
         style={{ backgroundColor: "#495057", borderColor: "#000" }}
       >
         <div className="input-group input-group-lg">
           <div className="input-group-prepend">
             <select
-              className="btn mr-2"
+              className="btn me-2 catSelector"
               onChange={handleChange("category")}
               style={{
                 backgroundColor: "#495057",
@@ -104,7 +104,7 @@ const Search = () => {
 
           <input
             type="search"
-            className="form-control text-white"
+            className="form-control text-white ml-3"
             onChange={handleChange("search")}
             placeholder="Search by name"
             style={{

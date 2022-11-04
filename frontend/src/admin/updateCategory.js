@@ -127,7 +127,7 @@ const UpdateCategory = ({ match }) => {
   };
 
   return (
-    <Layout title={`Hi ${user.name}`} className="container-fluid">
+    <Layout title="Radu's ecommerce shop" className="container-fluid">
       <div className="row">
         <div className="col-md-8 offset-md-2 m-b-250 mb-5">
           {showError()}

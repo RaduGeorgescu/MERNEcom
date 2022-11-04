@@ -199,7 +199,7 @@ const AddProduct = () => {
     );
 
   return (
-    <Layout title="Add a new product">
+    <Layout title="Radu's ecommerce shop">
       <div className="row">
         <div className="col-md-8 offset-md-2">
           {showLoading()}

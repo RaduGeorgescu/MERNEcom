@@ -34,29 +34,25 @@ const Product = (props) => {
   }, [props]);
 
   return (
-    <Layout title={product && product.name}>
+    <Layout title="Radu's ecommerce shop">
       <Row className="ms-5">
         {product && product.description && (
-          <Col>
-            <Card
-              CardType="Product"
-              product={product}
-              showViewProductButton={false}
-            />
-          </Col>
+          <Card
+            CardType="Product"
+            product={product}
+            showViewProductButton={false}
+          />
         )}
-        <Col>
-          <Row>
-            <h4>Related products</h4>
-            <Row xs={1} s={2} md={2}>
-              {relatedProduct.map((p, i) => (
-                <Col className="mb-3" key={i}>
-                  <Card CardType="shortCard" product={p} />
-                </Col>
-              ))}
-            </Row>
+        <Row>
+          <h4>Related products</h4>
+          <Row xs={1} md={2} xl={3} xxl={4}>
+            {relatedProduct.map((p, i) => (
+              <Col className="mb-3" key={i}>
+                <Card CardType="shortCard" product={p} />
+              </Col>
+            ))}
           </Row>
-        </Col>
+        </Row>
       </Row>
     </Layout>
   );

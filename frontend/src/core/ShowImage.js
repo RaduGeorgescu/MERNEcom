@@ -7,8 +7,10 @@ const ShowImage = ({ item, url, CardType }) => (
     src={`${API}/${url}/photo/${item._id}`}
     alt={item.name}
     className="mb-3"
-    width={CardType === "shortCard" && "100%"}
-    height={CardType === "shortCard" && 330}
+    width=// {50}
+    {CardType === "shortCard" && "100%"} //shortcard or product make product page
+    height=//{50}
+    {CardType === "shortCard" && 330}
   />
 );
 

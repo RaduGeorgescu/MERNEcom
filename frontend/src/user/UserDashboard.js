@@ -91,7 +91,7 @@ const Dashboard = () => {
   };
 
   return (
-    <Layout title="Dashboard" className="container-fluid">
+    <Layout title="Radu's ecommerce shop" className="container-fluid">
       <div className="row">
         <div className="col-3">{userLinks()}</div>
         <div className="col-9">

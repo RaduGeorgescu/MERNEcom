@@ -47,7 +47,7 @@ const Cart = () => {
   );
 
   return (
-    <Layout title="Shopping Cart" className="container-fluid">
+    <Layout title="Radu's ecommerce shop" className="container-fluid">
       <Row className="row">
         <Col xs={6}>
           {items.length > 0 ? showItems(items) : noItemsMessage()}
